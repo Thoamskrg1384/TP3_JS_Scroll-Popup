@@ -16,15 +16,18 @@ window.addEventListener("scroll", () => {
   }
 
   // Popup
-  if (scrollValue > 0.8) {
+  if (scrollValue > 0.85) {
     popup.style.opacity = 1;
     popup.style.transform = "none";
   }
 });
 
-// Fermeture définitive du popup
+// Disparition définitive du popup
+// closeBtn.addEventListener("click", () => {
+//   popup.style.display = "none";
+// });
 closeBtn.addEventListener("click", () => {
-  popup.style.display = "none";
+  popup.style.transform = "translateX(1000px)";
 });
 
 // Réduire la navbar quand on descend vers le site, la remettre à sa taille initiale si on remonte tout en haut
